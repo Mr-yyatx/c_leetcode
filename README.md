@@ -2,16 +2,8 @@
 
 ## Getting Started
 
-Install dependencies,
+npm i -g tyarn --registry=https://registry.npm.taobao.org
 
-```bash
-$ yarn
-```
+tyarn install
 
-Start the dev server,
-
-```bash
-$ yarn start
-```
-
-在src/.umi/core/route.ts引入使用config路由文件
+tyarn start
