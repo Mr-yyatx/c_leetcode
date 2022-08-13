@@ -7,7 +7,7 @@ export default function IndexPage() {
   }
   return (
     <div>
-      <h1 className={styles.title} onClick={to}>Page index111222</h1>
+      <h1 className={styles.title} onClick={to}>Page 原神</h1>
     </div>
   );
 }
