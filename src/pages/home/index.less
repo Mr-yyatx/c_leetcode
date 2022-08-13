@@ -1,5 +1,55 @@
 .home {
-  padding: 0 150px;
+  padding: 0 130px;
+
+  .animate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    img {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .next {
+      cursor: pointer;
+      color: white;
+      font-size: 25px;
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    }
+  }
+
+  .pary_result {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      opacity: .6;
+      z-index: 999;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    img {
+      width: 80vw;
+      height: 90vh;
+      z-index: 1111;
+    }
+  }
 
   .img {
     width: 100vw;
@@ -22,17 +72,17 @@
       width: 100px;
       height: 100vh;
       background-color: #158bb8;
-      padding-top: 200px;
+      padding-top: 110px;
 
       .card {
-        width: 300px;
-        height: 120px;
+        width: 200px;
         background-color: #11659a;
         text-align: center;
-        line-height: 120px;
-        margin-left: -100px;
+        line-height: 80px;
+        margin-left: -50px;
         font-size: 30px;
         color: #2e317c;
+        margin-bottom: 10px;
       }
     }
 
@@ -44,9 +94,10 @@
       .table_head {
         display: flex;
         justify-content: flex-end;
+        font-size: 20px;
 
-        span {
-          display: inline-block;
+        >div {
+          cursor: pointer;
           width: 170px;
           height: 40px;
           background-color: aliceblue;
@@ -55,14 +106,25 @@
           line-height: 40px;
           margin-left: 30px;
           border-radius: 15px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-around;
+
+          >img {
+            width: 20px;
+            height: 20px;
+          }
         }
       }
 
       .table_center {
         width: 70vw;
-        height: 70vh;
-        background-color: black;
         margin: 30px 0;
+
+        >img {
+          width: 100%;
+        }
       }
 
       .table_foot {

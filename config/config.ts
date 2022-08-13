@@ -7,4 +7,5 @@ export default defineConfig({
   },
   routes: routes,
   fastRefresh: {},
+  antd: {}
 });
