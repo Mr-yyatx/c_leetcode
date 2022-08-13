@@ -6,8 +6,8 @@ export default function IndexPage() {
     history.push('/users')
   }
   return (
-    <div>
-      <h1 className={styles.title} onClick={to}>Page 原神</h1>
+    <div className={styles.home}>
+      <h1 className={styles.title} onClick={to}>去抽卡</h1>
     </div>
   );
 }
