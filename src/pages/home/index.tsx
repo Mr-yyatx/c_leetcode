@@ -1,24 +1,24 @@
 import { backImg, list, stonePay, prayList, animate, prayOneResult, prayTenResult } from '@/constants/constants';
 import styles from './index.less';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import PayModal from './componets/PayModal';
 import { DoubleRightOutlined, PlusCircleOutlined } from '@ant-design/icons';
 import { randomNum } from '@/utils';
 import { message } from 'antd';
 
+let firstTimeout: string | number | NodeJS.Timeout | undefined
+
 const Home = () => {
   const [showPayModal, setShowPayModal] = useState(false)
-  const [stoneNum, setStoneNum] = useState(1600)
+  const [stoneNum, setStoneNum] = useState(160000)
   const [nowChoice, setNowChoice] = useState(0)
   const [animateIndex, setAnimateIndex] = useState(0)
   const [beginAnimate, setBeginAnimate] = useState(false)
   const [displayPrayRes, setDisplayPrayRes] = useState(false)
   const [prayType, setPrayType] = useState(0)
   const [resultUrl, setResultUrl] = useState(prayOneResult[0])
-
   const prayResult = [prayOneResult, prayTenResult]
 
-  let firstTimeout: NodeJS.Timeout, secondTimeout: string | number | NodeJS.Timeout | undefined
   const handleCancel = () => {
     setShowPayModal(false)
   }
@@ -33,32 +33,23 @@ const Home = () => {
   }
 
   useEffect(() => {
-    if (animateIndex == 2 && beginAnimate) {
-      setTimeout(() => {
-        setBeginAnimate(false)
-        setAnimateIndex(0)
-        setDisplayPrayRes(true)
-      }, 1000)
+    if (animateIndex > 2) {
+      firstTimeout && window.clearInterval(firstTimeout)
+      setBeginAnimate(false)
+      setAnimateIndex(0)
+      setDisplayPrayRes(true)
     }
   }, [animateIndex])
 
   const handleBegin = () => {
     setBeginAnimate(true)
-    firstTimeout = setTimeout(() => {
-      setAnimateIndex(1)
+    firstTimeout = setInterval(() => {
+      setAnimateIndex(index => index + 1)
     }, 1000)
-    secondTimeout = setTimeout(() => {
-      setAnimateIndex(2)
-    }, 2000)
   }
 
   const colse = () => {
-    if (firstTimeout) {
-      clearTimeout(firstTimeout)
-    }
-    if (secondTimeout) {
-      clearTimeout(secondTimeout)
-    }
+    firstTimeout && window.clearTimeout(firstTimeout)
     setBeginAnimate(false)
     setAnimateIndex(0)
     setDisplayPrayRes(true)
