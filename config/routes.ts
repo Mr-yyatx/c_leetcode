@@ -1,13 +1,29 @@
 export const routes = [
   {
+    path: "/",
+    component: '@/pages/home/index',
+    exact: true,
+    wrappers: ['@/wrappers/index']
+  },
+  {
     path: "/home",
     component: '@/pages/home/index',
     exact: true,
     wrappers: ['@/wrappers/index']
   },
   {
-    path: "/",
-    component: '@/pages/index',
+    path: "/learn",
+    component: '@/pages/learn/index',
+    exact: true
+  },
+  {
+    path: "/community",
+    component: '@/pages/community/index',
+    exact: true
+  },
+  {
+    path: "/profile",
+    component: '@/pages/profile/index',
     exact: true
   },
   {

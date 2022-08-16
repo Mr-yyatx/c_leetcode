@@ -1,0 +1,27 @@
+@import '~@/common.less';
+
+.direc {
+  .flex_row_y_center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 20px 0;
+  background-color: @menuBgColor;
+  border-radius: 10px;
+  padding: 10px 20px;
+  user-select: none;
+
+  >div {
+    margin-left: 20px;
+    background-color: @labelBgColor;
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  .be_choose {
+    background-color: rgb(39, 36, 36);
+    color: aliceblue;
+  }
+}
