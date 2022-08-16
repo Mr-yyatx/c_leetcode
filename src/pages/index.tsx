@@ -9,10 +9,9 @@ export default function IndexPage() {
 
   return (
     <div className={styles.home}>
-      <img src={homeBg} />
       <button className={styles.button}
         onClick={to}>
-        去抽卡
+        home
       </button>
     </div>
   );
