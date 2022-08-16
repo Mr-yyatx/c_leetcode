@@ -4,7 +4,7 @@ import styles from './index.less';
 
 export default function IndexPage() {
   const to = () => {
-    history.push('/users')
+    history.push('/home')
   }
 
   return (
