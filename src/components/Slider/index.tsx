@@ -7,10 +7,12 @@ interface Prop {
 
 export default (props: Prop) => {
   return (
-    <Carousel autoplay>
-      {props.imageArray.map((item, index) => (
-        <img src={item} key={index} />
-      ))}
-    </Carousel>
+    <div className={styles.slider}>
+      <Carousel autoplay>
+        {props.imageArray.map((item, index) => (
+          <img src={item} key={index} />
+        ))}
+      </Carousel>
+    </div>
   )
 }

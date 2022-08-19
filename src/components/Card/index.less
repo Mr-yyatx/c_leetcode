@@ -1,10 +1,28 @@
 @import '~@/common.less';
 
 .card {
-  width: 144px;
-  margin: 10px 20px;
+  margin-bottom: 40px;
+  width: 20%;
+  padding: 2%;
 
-  img {
-    width: 144px;
+  >img {
+    border-radius: 10px;
+    width: 100%;
   }
+
+  >img:hover {
+    transform: translateY(-10px);
+    transition: all ease 0.5s;
+  }
+
+  .card_title {
+    margin: 10px 0;
+  }
+}
+
+.card_none {
+  width: 20%;
+  padding: 2%;
+  height: auto;
+  margin-bottom: 40px;
 }

@@ -14,12 +14,21 @@ const data = [{
   url: cover
 }, {
   url: cover
+}, {
+  url: cover
+}, {
+  url: cover
 }]
 
 export default () => {
+  const handleList = (arr: any[]) => {
+    let len = arr.length
+    return [...arr, ...new Array(5 - len % 5)]
+  }
+
   return (
     <div className={styles.list}>
-      {data.map((item, index) => (
+      {handleList(data).map((item, index) => (
         <Card data={item} key={index} />
       ))}
     </div>

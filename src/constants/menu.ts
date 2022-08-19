@@ -1,6 +1,6 @@
 export default [
   {
-    title: "题库",
+    title: "首页",
     link: "/home",
     key: "home",
     icon: "github"

@@ -5,7 +5,9 @@ export default () => {
   return (
     <div className={styles.home}>
       <Tab />
-      learn
+      <div className={styles.page}>
+
+      </div>
     </div>
   );
 }
