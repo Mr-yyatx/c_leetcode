@@ -1,0 +1,36 @@
+@import '~@/common.less';
+
+.body {
+  width: 180px;
+  background: #fff;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  z-index: 99;
+  transition: all .2s linear;
+  max-height: calc(100% - 209px);
+  overflow: auto;
+  margin-right: 30px;
+
+  >div {
+    padding: 0 12px;
+    color: #252933;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    margin-bottom: 2px;
+    font-size: 16px;
+    transition: color .3s;
+    user-select: none;
+  }
+
+  .menu_hover {
+    color: #1e80ff;
+    background: #eaf2ff !important;
+  }
+
+  >div:hover {
+    .menu_hover
+  }
+}
